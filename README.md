@@ -15,6 +15,31 @@ npm i @react-native-ui-design/button react-native-paper react-native-responsive-
 
 ## Usage
 
+Wrap your root component in `PaperProvider` from `react-native-paper`. This will usually be in the `index.js` file. If you have an Expo project, you can do this inside the exported component in the `App.js` file.
+
+Example:
+```js
+import * as React from 'react';
+import { AppRegistry } from 'react-native';
+import { PaperProvider } from 'react-native-paper';
+import { name as appName } from './app.json';
+import App from './src/App';
+
+export default function Main() {
+  return (
+    <PaperProvider>
+      <App />
+    </PaperProvider>
+  );
+}
+
+AppRegistry.registerComponent(appName, () => Main);
+```
+
+Import Dialog component and use
+
+Example:
+
 ```js
 import Dialog from '@react-native-ui-design/dialog';
 
