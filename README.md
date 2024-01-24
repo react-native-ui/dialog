@@ -91,7 +91,7 @@ return (
 ---
 
 ## Notes
-- For more details about Button props please refer here: [@react-native-ui-design/button](https://www.npmjs.com/package/@react-native-ui-design/button)
+- For more details about Button props please refer here: <a href="https://www.npmjs.com/package/@react-native-ui-design/button" target="_blank">@react-native-ui-design/button</a>
 
 ## Contributing
 
@@ -109,7 +109,7 @@ The MIT License.
       <img src="https://avatars.githubusercontent.com/u/41302126?v=4" width="64" height="64" alt="Abiraman K">
     </td>
     <td>
-      <a href="https://github.com/Abiraman K">Abiraman K</a>
+      <a href="https://github.com/AbiramanK" target="_blank">Abiraman K</a>
     </td>
   </tr>
 </table>
