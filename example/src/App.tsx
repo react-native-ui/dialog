@@ -1,31 +1,69 @@
-import * as React from 'react';
+import React, { useState } from 'react';
+import { Alert, StyleSheet, View } from 'react-native';
+import { Provider } from 'react-native-paper';
+import { Button } from '@react-native-ui-design/button';
+import { responsiveSize } from 'react-native-responsive-helper';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from '@react-native-ui-design/dialog';
+import Dialog from '@react-native-ui-design/dialog';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  function onPressOpenDialog() {
+    openDialog();
+  }
+
+  function openDialog() {
+    setIsOpen(true);
+  }
+
+  function closeDialog() {
+    setIsOpen(false);
+  }
+
+  function onPressAccept() {
+    closeDialog();
+    Alert.alert('Presssed Accept');
+  }
+
+  function onPressReject() {
+    closeDialog();
+    Alert.alert('Presssed Reject');
+  }
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <Provider>
+      <View style={styles?.container}>
+        <View style={styles?.content}>
+          <Button onPress={onPressOpenDialog} mode="contained">
+            Open Dialog
+          </Button>
+        </View>
+        <Dialog
+          visible={isOpen}
+          title="@react-native-ui-design/dialog"
+          message="@react-native-ui-design/dialog have lots of predefined customizations & features"
+          onPressClose={closeDialog}
+          acceptText="Accept"
+          rejectText="Reject"
+          onAccept={onPressAccept}
+          onReject={onPressReject}
+          shouldReverseActionButton={true}
+          isDismissable={true}
+          onDismiss={closeDialog}
+        />
+      </View>
+    </Provider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: responsiveSize(30),
   },
 });

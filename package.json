@@ -55,11 +55,14 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.5.0",
+    "@react-native-ui-design/button": "^0.1.2",
     "@react-native/eslint-config": "^0.72.2",
     "@release-it/conventional-changelog": "^5.0.0",
+    "@types/color": "^3.0.6",
     "@types/jest": "^28.1.2",
     "@types/react": "~17.0.21",
     "@types/react-native": "0.70.0",
+    "@types/react-native-vector-icons": "^6.4.18",
     "commitlint": "^17.0.2",
     "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
@@ -70,6 +73,10 @@
     "react": "18.2.0",
     "react-native": "0.73.2",
     "react-native-builder-bob": "^0.23.2",
+    "react-native-paper": "^5.12.2",
+    "react-native-responsive-helper": "^0.1.0",
+    "react-native-safe-area-context": "^4.8.2",
+    "react-native-vector-icons": "^10.0.3",
     "release-it": "^15.0.0",
     "typescript": "^5.0.2"
   },
@@ -77,8 +84,13 @@
     "@types/react": "17.0.21"
   },
   "peerDependencies": {
+    "@react-native-ui-design/button": "*",
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-paper": "*",
+    "react-native-responsive-helper": "*",
+    "react-native-safe-area-context": "*",
+    "react-native-vector-icons": "*"
   },
   "workspaces": [
     "example"
