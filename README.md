@@ -90,6 +90,9 @@ return (
 
 ---
 
+## Notes
+- For more details about Button props please refer here: [@react-native-ui-design/button](https://www.npmjs.com/package/@react-native-ui-design/button)
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
